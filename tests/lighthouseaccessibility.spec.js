@@ -42,20 +42,20 @@ test('Login Page Accessibility Testing', async()=>{
 
   await runAudit(page,"login_page");
 })
-// test('Amazon Cart items list', async()=>{
-//   await page.goto("https://www.amazon.in/");
-//   await page.locator("#twotabsearchtextbox").fill("perfumes");
-//   await page.locator("#nav-search-submit-button").click();
-//   await page.locator("(//img[@class='s-image'])[1]").click();
-//   await page.locator("#add-to-cart-button").click();
+test('Amazon Cart items list', async()=>{
+  await page.goto("https://www.amazon.in/");
+  await page.locator("#twotabsearchtextbox").fill("perfumes");
+  await page.locator("#nav-search-submit-button").click();
+  await page.locator("(//img[@class='s-image'])[1]").click();
+  await page.locator("#add-to-cart-button").click();
 
-//   await page.locator("#twotabsearchtextbox").fill("smart watch");
-//   await page.locator("#nav-search-submit-button").click();
-//   await page.locator("#add-to-cart-button").click();
-// })
+  await page.locator("#twotabsearchtextbox").fill("smart watch");
+  await page.locator("#nav-search-submit-button").click();
+  await page.locator("#add-to-cart-button").click();
+})
 
-// test.afterAll("Teardown", async () => {
-//   await page.close();
-//   await context.close();
-//   await browser.close();
-// });
+test.afterAll("Teardown", async () => {
+  await page.close();
+  await context.close();
+  await browser.close();
+});
